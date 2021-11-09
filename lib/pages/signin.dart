@@ -5,6 +5,7 @@ import 'package:flutter_uts/pages/login.dart';
 class SignIn extends StatefulWidget {
   signinState createState() => signinState();
 }
+
 class signinState extends State<SignIn>{
   final _formKey = GlobalKey<FormState>();
   var confirmPass;
@@ -19,167 +20,170 @@ class signinState extends State<SignIn>{
               child: Form(
                 child: Container(
                   child: Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                       Container(
-                         padding: EdgeInsets.only(bottom: 20),
-                         alignment: Alignment.topLeft,
-                          child: ElevatedButton(
-                            onPressed: (){
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (BuildContext context) {
-                                    return Login();
-                                    },
-                                  )
-                              );
-                            },
-                            child: new Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
-                          size: 15.0,
-                        
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.purple.shade200,
-                          onPrimary: Colors.deepPurple,
-                          shape: CircleBorder(),
-                          padding: EdgeInsets.all(20),
-                        ),
-                            )
-                          
-                       ),
-                     Container(
-                          height: 90,
-                          width: 90,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                    AssetImage("assets/logo.png"),
-                              )    
-                          )
-                        ),
-                        
-                        Container(
-                    margin: EdgeInsets.only(top: 70, bottom: 40),
-                    alignment: Alignment.topCenter,
-                          child: Text(
-                            "Welcome Back, Explorer!",
-                            style: new TextStyle(
-                              fontSize: 20,
-                              color: Colors.black),
+                      Container(
+                        padding: EdgeInsets.only(bottom: 20),
+                        alignment: Alignment.topLeft,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return Login();
+                                },
+                              )
+                            );
+                          },
+                          child: new Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                            size: 15.0,
                           ),
-                        
-                    ),
-            Container(
-                    height: 10,
-                     margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                  ),
-
-                TextField(
-                    decoration: InputDecoration(
-                    hintText: 'Email Address',
-                    labelText: 'Email Adress',
-                    border: OutlineInputBorder()
-                    ),
-
-                ),
-                Container(
-                    height: 10,
-                     margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                  ),
-
-                TextField(
-                    decoration: InputDecoration(
-                    hintText: 'Password',
-                    labelText: 'Password',
-                    border: OutlineInputBorder()
-                    ),
-                ),
-                Row(
-                  children: <Widget>[
-                    Text(
-                      "Forgot Password?",
-                      style: TextStyle(
-                        color: Colors.grey
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.purple.shade200,
+                            onPrimary: Colors.deepPurple,
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(20),
+                          ),
+                        )  
                       ),
-                    ),
-                     GestureDetector(
-                    onTap: (){
-                      print("hallo");
-                    },
-                    child: Text(
-                      "Change Now",
-                      style: TextStyle(
-                        color: Colors.purple
+                      Container( 
+                        child: new Image.asset (
+                          'assets/logo.png',
+                          width: 150,
+                          height: 150,
+                        ),
+                        alignment: Alignment.center,
                       ),
-                    ),
-                  )
-                  ],
-                ),
-                Container(
-                  alignment: Alignment.center,
-                       padding: EdgeInsets.only(top: 10),
-                       child:  ElevatedButton(
-                        onPressed:(){
-                          if (_formKey.currentState!.validate()) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                        content:
-                                            Text('Processing . . .')),
-                                  );
-                                }
-                        },
-                        child: new Icon(
-                          Icons.arrow_forward,
-                          color: Colors.white,
-                          size: 15.0,
-                        
-                         ),
-                         style: ElevatedButton.styleFrom(
-                          primary: Colors.purple,
-                          onPrimary: Colors.grey,
-                          shape: CircleBorder(),
-                          padding: EdgeInsets.all(20),
+                      Container(
+                        margin: EdgeInsets.only(top: 40, bottom: 40),
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                          "Hello, Welcome Back!",
+                          style: new TextStyle (
+                            fontSize: 24,
+                            color: Colors.black
+                          ),
                         ),
                       ),
-                     ),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                ),
-                Row(
-                  children: <Widget>[
-                    Text(
-                      "Start Fresh Now?",
-                      style: TextStyle(
-                        color: Colors.grey
+
+                      Container(
+                        height: 10,
+                        margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Email Address',
+                          labelText: 'Email Adress',
+                          border: OutlineInputBorder()
+                        ),
                       ),
-                     GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return Form_login();
-                           }));
-                    },
-                    child: Text(
-                      "Sign Up",
-                      style: TextStyle(
-                        color: Colors.purple
+                      
+                      Container(
+                        height: 10,
+                        margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       ),
-                    ),
-                  )
-                  ],
-                ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          labelText: 'Password',
+                          border: OutlineInputBorder()
+                        ),
+                      ),
+
+                      
+
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(top: 30),
+                          ),
+                          Text(
+                            "Forgot Password?",
+                            style: TextStyle(
+                              color: Colors.grey
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: (){
+                              print("hallo");
+                            },
+                            child: Text(
+                              "Change Now",
+                              style: TextStyle(
+                                color: Colors.purple
+                              ),
+                            ),
+                          ),                
+                        ],
+                      ),
+                      
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(top: 20),
+                          ),
+                          Text(
+                            "Start Fresh Now?",
+                            style: TextStyle(
+                              color: Colors.grey
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return Form_login();
+                                }
+                              ));
+                            },
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(
+                                color: Colors.purple
+                              ),
+                            ),
+                          ), 
+                        ],
+                      ),
+                      
+                      Container(
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.only(top: 10),
+                        child:  ElevatedButton(
+                          onPressed:(){
+                            if (_formKey.currentState!.validate()) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content:
+                                  Text('Processing . . .')
+                                ),
+                              );
+                            }
+                          },
+                          
+                          child: new Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                            size: 20.0,
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.purple,
+                            onPrimary: Colors.grey,
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(20),
+                          ),
+                        ),
+                      ),
                     ],
-                    ),
-                    ),
-                    ),
+                  ),
+                ),
+              ),
             )
-        ],
+          ],
         ),
       )
     );
