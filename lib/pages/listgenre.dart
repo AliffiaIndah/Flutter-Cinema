@@ -16,6 +16,7 @@ import 'package:flutter_uts/model/user.dart';
 import 'package:flutter_uts/model/pref.dart';
 import 'package:flutter_uts/pages/nextpage.dart';
 import 'package:flutter_uts/pages/tiket.dart';
+import 'package:flutter_uts/pages/tempat_duduk.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 //import 'pertama.dart';
 
@@ -123,7 +124,7 @@ class _survey_2 extends State<Survey_2>{
                         );
                         Navigator.push(context, 
                         MaterialPageRoute(
-                          builder: (context)=>Checkout()));
+                          builder: (context)=>SelectSeatPage()));
                       },
                     )
                   ],
