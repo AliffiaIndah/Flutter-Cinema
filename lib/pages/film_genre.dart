@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uts/pages/form_login.dart';
 
-
 class Film_genre extends StatefulWidget {
   filmGenreState createState() => filmGenreState();
 }
@@ -32,35 +31,31 @@ class filmGenreState extends State<Film_genre>{
                               );
                      },
                      child: Container(
+                       //padding: EdgeInsets.all(20),
                        child: new Icon(
                       Icons.arrow_back,
-                      color: Colors.white,
+                      color: Colors.black,
                       size: 15,
                      ),
                      ),
                      style: ElevatedButton.styleFrom(
-                       primary: Colors.purple.shade200,
-                       onPrimary: Colors.deepPurple,
+                       primary: Colors.white,
                        shape: CircleBorder(),
                        padding: EdgeInsets.all(20),
                      ),
                    ),
                  ),
            Container(
-                    // margin: EdgeInsets.only(top: 10),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                            "Select Your Favorite Genre!",
-                            textAlign: TextAlign.center,
+                    margin: EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Select Your, \nFavorite Genre!",
                             style: new TextStyle(
                               fontSize: 20,
-                              color: Colors.black
-                            ),
-                            
+                              color: Colors.black),
+                            textAlign: TextAlign.left,
                           ),
-                    ), 
-                  ),
+                        
+                    ),
            Container(
              child: Row(
                mainAxisAlignment: MainAxisAlignment.center,
@@ -70,12 +65,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                     width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Action',
+                       'Horor',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -85,7 +80,6 @@ class filmGenreState extends State<Film_genre>{
                      
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                       onPrimary: Colors.lightBlue,
                      ),
                    ),
                  ),
@@ -94,12 +88,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                      alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                      padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Comedy',
+                       'Music',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -108,7 +102,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.yellow,
                      ),
                    ),
                  ),
@@ -124,12 +117,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Horror',
+                       'Action',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -138,7 +131,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.grey,
                      ),
                    ),
                  ),
@@ -147,12 +139,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Fiction',
+                       'Drama',
+                       textAlign:TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -161,7 +153,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.greenAccent,
                      ),
                    ),
                  ),
@@ -177,12 +168,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Romance',
+                       'War',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -191,7 +182,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.pink,
                      ),
                    ),
                  ),
@@ -200,12 +190,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Animation',
+                       'Crime',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -214,7 +204,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.purple,
                      ),
                    ),
                  ),
@@ -227,20 +216,14 @@ class filmGenreState extends State<Film_genre>{
                  mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
                  Container(
-                    margin: EdgeInsets.only(top: 30),
-                    alignment: Alignment.center,
-                    // child: Align(
-                    //   alignment: Alignment.center,
-                      child: Text(
-                            "Select Your Movie Language!",
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                            ),
-                            
-                          ),
-                    // ), 
+                  margin: EdgeInsets.only(top: 5),
+                  child: Text(
+                    'Movie Language \nYou Prefer',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                          fontSize: 20,
+                      )
+                    ),
                   ),
                   Container(
              child: Row(
@@ -251,12 +234,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'English',
+                       'Indonesia',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -265,7 +248,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.yellow,
                      ),
                    ),
                  ),
@@ -274,12 +256,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'German',
+                       'English',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -288,7 +270,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.yellow,
                      ),
                    ),
                  ),
@@ -304,12 +285,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                       alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
-                       'Indonesian',
+                       'Japanese',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -318,7 +299,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.yellow,
                      ),
                    ),
                  ),
@@ -327,12 +307,12 @@ class filmGenreState extends State<Film_genre>{
                    child: ElevatedButton(
                      onPressed: (){},
                      child: Container(
-                      alignment: Alignment.center,
-                      //  padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
-                      width: 130,
-                       height: 60,
+                       width: 150,
+                       height: 45,
+                       padding: EdgeInsets.fromLTRB(35, 13, 35, 13),
                        child: Text(
                        'Korean',
+                       textAlign: TextAlign.center,
                        style: TextStyle(
                          fontSize: 15,
                          color: Colors.black
@@ -341,7 +321,6 @@ class filmGenreState extends State<Film_genre>{
                      ),
                      style: ElevatedButton.styleFrom(
                        primary: Colors.white,
-                        onPrimary: Colors.yellow,
                      ),
                    ),
                  ),
